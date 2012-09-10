@@ -19,7 +19,7 @@ module Finder
                     end
                   elsif key =~ /_id$/
                     model_name = key.chomp("_id").capitalize
-                    var_name = key.chomp("_id")
+                    var_name = "@" + key.chomp("_id")
                     begin
                       instance_variable_set(var_name, eval(model_name).find_by_id(value))
                     rescue

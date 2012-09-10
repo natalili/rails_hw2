@@ -1,8 +1,10 @@
 class CommentsController < ApplicationController
+  include Finder
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+    @post
+    @comments = @post.comments
 
     respond_to do |format|
       format.html # index.html.erb
