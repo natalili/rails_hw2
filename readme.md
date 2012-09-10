@@ -1,0 +1,1 @@
+Home work. Rails. Create module Finder. 
